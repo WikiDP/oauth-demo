@@ -1,0 +1,16 @@
+{% extends "page.html" %}
+{% block title %}Oops...{% endblock %}
+{% block page_content %}
+
+  <div class="about-page middle center white" id="content-frame">
+    <h1>Oops...</h1>
+    <h2>The Page You are attempting to reach is not available</h2>
+    <p>
+      {{message}}
+    </p>
+    <p>
+      Please Try Again or <a href="{{url_for('route_page_welcome')}}">Return Home.</a>
+    </p>
+  </div>
+
+{% endblock page_content %}

@@ -1,0 +1,29 @@
+{% extends "page.html" %}
+{% block title %}Home{% endblock %}
+{% block page_content %}
+
+<div class="welcome-div middle center">
+	<h1>Welcome</h1>
+	<form role="form">
+			<div class="form-group">
+				 <label for="username">Username</label>
+				 <input type="text" id="username" name="username" placeholder="Wikimedia username" autocomplete="username">
+			</div>
+			<div class="form-group">
+				 <label for="password">Password</label>
+				 <input type="password" id="password" name="password" placeholder="Wikimedia password" autocomplete="current-password">
+			</div>
+			<button type="buton">Login</button>
+	</form>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+	    <ul class=flashes>
+	    {% for message in messages %}
+	      <li>{{ message }}</li>
+	    {% endfor %}
+	    </ul>
+	  {% endif %}
+	{% endwith %}
+</div>
+
+{% endblock page_content %}
