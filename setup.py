@@ -17,7 +17,7 @@ setup(
     packages=['oauthdemo'],
     include_package_data=True,
     install_requires=[
-        'flask==1.1.1',
+        'flask==2.3.2',
         'pylint',
         'pytest',
         'pytest-cov',
